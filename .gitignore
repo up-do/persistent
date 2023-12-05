@@ -60,3 +60,6 @@ persistent-test/db/
 
 stack.yaml.lock
 *.yaml.lock
+
+.updo
+updo
