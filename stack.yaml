@@ -1,11 +1,16 @@
-resolver: nightly-2022-12-16
+user-message: "WARNING: This stack project is generated."
 
+resolver: nightly-2023-12-05
+
+# We have 8 packages.
 packages:
   - ./persistent
-  - ./persistent-sqlite
-  - ./persistent-test
   - ./persistent-mongoDB
   - ./persistent-mysql
   - ./persistent-postgresql
-  - ./persistent-redis
   - ./persistent-qq
+  - ./persistent-redis
+  - ./persistent-sqlite
+  - ./persistent-test
+
+extra-deps: []

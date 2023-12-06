@@ -1,24 +1,18 @@
+import: https://stackage.org/nightly-2023-12-05/cabal.config
+
+-- We have 8 packages.
 packages:
-  persistent
-  persistent-sqlite
-  persistent-test
-  persistent-mongoDB
-  persistent-mysql
-  persistent-postgresql
-  persistent-redis
-  persistent-qq
+    persistent
+  , persistent-mongoDB
+  , persistent-mysql
+  , persistent-postgresql
+  , persistent-qq
+  , persistent-redis
+  , persistent-sqlite
+  , persistent-test
 
--- GHC 9.4 shims for persistent
+-- Version equality constraints.
 
--- These need hackage revisions but otherwise test fine in the repo
-allow-newer:
-    -- https://github.com/haskellari/postgresql-simple/pull/95
-   , postgresql-simple:base
-   , postgresql-simple:template-haskell
+program-options
+  ghc-options: -fhide-source-paths
 
--- Needed to test that `persistent-redis` works with mtl-2.3
--- https://github.com/informatikr/hedis/pull/190
--- source-repository-package
---     type: git
---     location: https://github.com/ysangkok/hedis
---     tag: 6f36989836b49974f51a6ee8edaf156490590980
