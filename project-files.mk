@@ -46,11 +46,14 @@ endif
 
 .DEFAULT_GOAL := all
 
+UPDO_REPO := https://github.com/cabalism/updo
 UPDO_VERSION ?= 60545b108b7a6a2f802ec7a161aa4b9eb7441baf
-UPDO_URL := https://github.com/cabalism/updo/archive/${UPDO_VERSION}.tar.gz
+UPDO_ARCHIVE := ${UPDO_REPO}/archive/${UPDO_VERSION}.tar.gz
+UPDO_COMMIT := ${UPDO_REPO}/commit/${UPDO_VERSION}
 
 updo/Makefile:
+	$(info Referencing updo at $(UPDO_COMMIT))
 	rm -rf updo
-	curl -sSL ${UPDO_URL} | tar -xz
+	curl -sSL ${UPDO_ARCHIVE} | tar -xz
 	mv updo-* updo
 	chmod +x $$(grep -RIl '^#!' updo)
