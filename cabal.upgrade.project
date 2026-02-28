@@ -1,10 +1,9 @@
-import: ./project-stackage/lts-24.32.config
+import: ./project-stackage/nightly-2025-12-30.config
 
--- We have 8 packages.
+-- We have upgraded 7 packages and have 1 yet to do.
 packages:
     persistent
   , persistent-mongoDB
-  , persistent-mysql
   , persistent-postgresql
   , persistent-qq
   , persistent-redis
@@ -13,7 +12,12 @@ packages:
 
 -- Version equality constraints.
 constraints:
-    postgresql-simple-interval ==1.0.1.2
+    mongoDB ==2.7.1.4
+  , resource-pool ==0.4.0.0
+  , cryptohash ==0.11.9
+  , cryptonite ==0.30
+  , mysql ==0.2.1
+  , mysql-simple ==0.4.9
 program-options
   ghc-options: -fhide-source-paths
 
