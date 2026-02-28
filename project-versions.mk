@@ -1,7 +1,9 @@
 # Versions of GHC and stackage resolver, the ones we're on and the next ones
 # we're upgrading to.
-GHC_VERSION ?= 9.10.3
-STACKAGE_VERSION ?= lts-24.32
+GHC_VERSION ?= 9.12.2
+STACKAGE_VERSION ?= nightly-2025-12-30
+# GHC_VERSION ?= 9.10.3
+# STACKAGE_VERSION ?= lts-24.32
 # GHC_VERSION ?= 9.8.4
 # STACKAGE_VERSION ?= lts-23.28
 # GHC_VERSION ?= 9.6.7
